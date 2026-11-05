@@ -62,7 +62,7 @@ header{
 
 header nav,
 header ul{
-    margin: 0;
+    margin-left: 180px;
     padding: 0;
 }
 
