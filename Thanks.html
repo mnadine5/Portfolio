@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you | Nadine Murora</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #0b1220;
+            color: #e8eefb;
+            font-family: Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .thanks{
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 120px 24px;
+            text-align: center;
+        }
+
+        h1{
+            font-size: 44px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        h1 span{
+            color: #3b9bff;
+        }
+
+        p{
+            color: #9fb0cc;
+            margin-bottom: 16px;
+        }
+
+        .btn{
+            display: inline-block;
+            margin-top: 16px;
+            padding: 12px 24px;
+            background-color: #3b9bff;
+            border: 1px solid #3b9bff;
+            border-radius: 999px;
+            color: #0b1220;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .btn:hover{
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="thanks">
+        <h1>Thank you, <span id="visitor">friend</span>!</h1>
+        <p>Your comment means a lot to me. I appreciate you taking the time to visit my portfolio and share your thoughts.</p>
+        <p>I read every message, and if you left a question or an email address, I'll get back to you soon.</p>
+        <a class="btn" href="index.html">Back to my portfolio</a>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("name");
+
+        if (name) {
+            document.getElementById("visitor").textContent = name;
+        }
+    </script>
+</body>
+</html>
